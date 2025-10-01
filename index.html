@@ -1,0 +1,153 @@
+<!doctype html>
+
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Estudio Jurídico | Launes</title>
+  <link rel="stylesheet" media="all" href="css/style.css" />
+  <link rel="icon" type="image/ico" href="favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Called of font style file -->
+
+  <header>
+    <nav id="nav" class="menu-principal">
+      <div id="logo" class="logo">
+        <img src="imagenes/logo.png" alt="Logo del Estudio Jurídico Launes">
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#el-estudio" class="normal">El Estudio</a></li>
+        <li><a href="#areas-de-practica" class="normal">Áreas de Práctica</a></li>
+        <li><a href="#nuestro-equipo" class="normal">Nuestro Equipo</a></li>
+      </ul>
+
+      <a href="#contacto" class="btn"><button> Contacto</button></a>
+
+      <a onclick="openNav()" class="menu-hamburguesa" href="#"><button> <img src="imagenes/menu hamburguesa.png"
+            alt="Menú lateral"></button></a>
+
+      <div class="overlay" id="menu-movil">
+        <a onclick="closeNav()" class="close normal" href="#">&times;</a>
+        <div class="overlay-content">
+          <a onclick="closeNav()" class="normal" href="#el-estudio">El Estudio</a>
+          <a onclick="closeNav()" class="normal" href="#areas-de-practica">Áreas de Práctica</a>
+          <a onclick="closeNav()" class="normal" href="#nuestro-equipo">Nuestro Equipo</a>
+          <a onclick="closeNav()" class="normal" href="#contacto">Contacto</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="lienzo">
+    <div id="el-estudio" class="contenedor-principal">
+      <div class="contenedor-blanco">
+        <h1>BIENVENIDOS A ESTUDIO JURÍDICO LAUNES</h1>
+        <p>
+          Somos un estudio jurídico comprometido con la excelencia, la integridad y la defensa de los intereses de
+          nuestros clientes. Brindamos asesoramiento legal integral a empresas y particulares, con un enfoque en la
+          resolución de conflictos y la planificación estratégica.
+        </p>
+      </div>
+    </div>
+
+    <!-- Renombramos 'administracion' a 'areas-de-practica' para mayor claridad -->
+    <div id="areas-de-practica" class="contenedor-principal">
+      <div class="contenedor-administracion color-negro">
+        <div class="contenedor-modular">
+          <div class="contenedor-imagenesdetitulos">
+            <!-- Podrías usar una imagen genérica o un icono representativo -->
+            <h2>ÁREAS DE PRÁCTICA</h2>
+          </div>
+        </div>
+        <div class="contenedor-modular">
+
+          <!-- Mantenemos la funcionalidad de "ver más" para listar las especialidades -->
+          <div id="servicios-administracion" class="servicios-ocultos">
+            <h3>Brindamos soluciones en diversas ramas del derecho:</h3>
+            <br>
+            <ul>
+              <li>Derecho Civil y Comercial</li>
+              <li>Derecho Laboral</li>
+              <li>Derecho Penal</li>
+              <li>Derecho de Familia y Sucesiones</li>
+              <li>Derecho Administrativo</li>
+              <li>Asesoramiento a Empresas</li>
+            </ul>
+          </div>
+          <div class="ver-mas-container">
+            <button id="btn-ver-mas" class="btn-ver-mas color-azul">Ver más</button>
+            <span id="arrow-indicator" class="arrow-indicator color-azul">&#9660;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Esta sección puede ser para presentar al equipo -->
+    <div id="nuestro-equipo" class="contenedor-principal">
+      <div class="contenedor-propiedades color-rojo">
+        <!-- Podríamos renombrar esta clase a 'contenedor-seccion' o algo más genérico -->
+        <div class="contenedor-modular">
+          <div class="contenedor-imagenesdetitulos">
+            <h2>NUESTRO EQUIPO</h2>
+          </div>
+        </div>
+        <div class="contenedor-modular">
+          <p>
+            Contamos con un equipo de profesionales altamente calificados y con una vasta experiencia en sus respectivas
+            áreas de especialización, dedicados a ofrecer un servicio personalizado y de la más alta calidad.
+          </p>
+          <!-- Aquí se podrían agregar perfiles de los abogados más adelante -->
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <div id="contacto" class="contenedor-contacto">
+    <div class="datosdecontacto">
+      <h2>CONTACTO</h2>
+      <div class="emails">
+        <p class="color-blanco">CONSULTAS: ✉ <br>contacto@apellidoasociados.com.ar</p>
+        <p class="color-rojo">TELÉFONO: 📞 <br>+54 9 11 1234-5678</p>
+        <p class="color-azul">DIRECCIÓN: 📍 <br>Av. Corrientes 1234, Piso 5, CABA</p>
+      </div>
+    </div>
+    <div class="redessociales">
+      <h2>REDES SOCIALES</h2>
+      <div class="logosredes">
+        <a href="https://www.facebook.com/profile.php?id=61553049479140" target="_blank"><img
+            src="imagenes/facebook.png" alt="Facebook"></a>
+        <a href="https://www.instagram.com/estudiojuridicoejemplo/" target="_blank"><img src="imagenes/instagram.png"
+            alt=""></a>
+        <a href="https://www.linkedin.com/company/toscanes-s-a/" target="_blank"><img src="imagenes/linkedin.png"
+            alt="LinkedIn"></a>
+        <a href="https://wa.link/suf4s3" target="_blank"><img src="imagenes/whatsapp.png" alt="WhatsApp"></a>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="contenedor-pie">
+      <p class="pie">
+        Design by Mauricio Belforte || Copyright ©2025 todos los derechos reservados
+      </p>
+      <!--       <p class="pie">
+        Design by Mauricio Belforte || <a href="https://hacelowebs.com/" target="_blank">Hacelowebs.com</a> - Powered by GF MARKETING.
+        Copyright ©2025 todos los derechos reservados
+      </p> -->
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script src="js/scroll.js"></script>
+</body>
+
+</html>
