@@ -1,16 +1,16 @@
 /* Global Reset */
 :root {
-    --color-primario: #dedfe0;
+    --color-primario: #d1d1d1;
     /* Texto principal (gris claro) */
-    --color-secundario: #b9a953;
+    --color-secundario: #d1a251;
     /* Dorado para títulos y acentos */
     --color-secundario-hover: #d4c060;
     /* Dorado más claro para hover */
-    --color-acento: #697384;
+    --color-acento: #dfdfdf;
     /* Gris azulado para texto/links */
-    --color-fondo-claro: #EDEDED;
+    --color-fondo-claro: #191919;
     /* Gris muy claro para fondos */
-    --color-fondo-oscuro: #141414;
+    --color-fondo-oscuro: #0000002f;
     /* Negro para fondos principales */
     --color-texto-inverso: #171717;
     --color-blanco: #ffffff;
@@ -38,7 +38,7 @@ body {
     margin-right: 0;
     background-color: var(--color-fondo-oscuro);
 
-    /*  background-image: url("../imagenes/edificio14.jpg"); */
+    background-image: url("../imagenes/fondonegro.png");
     background-size: cover;
     /* Hace que la imagen cubra todo el fondo */
     background-repeat: no-repeat;
@@ -76,7 +76,7 @@ header nav {
     padding: 5px 2%;
     justify-content: flex-end;
     align-items: center;
-    box-shadow: 2px 2px 2px 1px rgba(85, 85, 85, 0.2);
+    /*  box-shadow: 2px 2px 2px 1px rgba(85, 85, 85, 0.2); */
     /*transition: all 1s ease-out 0s;*/
     z-index: 1;
 
@@ -86,13 +86,18 @@ header nav {
 header .logo {
     cursor: pointer;
     margin-right: auto;
+
 }
 
 header .logo img {
     height: 70px;
     width: auto;
     transition: all 0.5s;
+    filter: invert(100%);
 }
+
+
+
 
 header .logo img:hover {
     transform: scale(1.2);
@@ -288,39 +293,13 @@ p {
 
     color: var(--color-texto-secundario);
     margin: 50px auto;
-    padding: 2%;
+    /*  padding: 2%; */
 
 
 
 }
 
-/* .contenedor-azul {
 
-
-    height: auto;
-    background-color: #0E2141;
-    color: var(--color-texto-secundario);
-    // margin: 20px auto;
-    padding: 10px;
-    display: flex;
-    overflow: hidden;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-
-}
- */
-
-/* .contenedor-azul img {
-    width: 100%;
-    height: fit-content;
-    margin: 2%;
-    // padding: 20px;
-    display: flex;
-    overflow: hidden;
-    opacity: none;
-
-} */
 
 .contenedor-blanco {
 
@@ -358,13 +337,37 @@ p {
 
     width: 100%;
     height: fit-content;
+    /* Filtro aplicado a imagen con url */
+    background-color: #1b1b1b39;
+    background-image: url("../imagenes/estudio3.png");
 
+
+    position: relative;
+    background-size: cover;
     color: var(--color-texto-secundario);
     /*  margin: 20px auto;*/
     padding: 40px 20px 20px 20px;
     display: flex;
     flex-direction: column;
 
+}
+
+.overlay-areas-practica {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease-in-out, visibility 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.overlay-areas-practica.visible {
+    opacity: 1;
+    visibility: visible;
 }
 
 .contenedor-administracion .contenedor-imagenesdetitulos {
@@ -410,6 +413,7 @@ p {
     align-self: center;
     gap: 3vw;
     /* padding: 2vw; */
+    z-index: 1;
 
 
     display: flex;
