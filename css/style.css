@@ -32,7 +32,7 @@
 body {
     font-size: 25px;
     text-align: center;
-    /* color: var(--color-gris-claro); */
+    color: var(--color-gris-claro); 
     margin-top: 80px;
     margin-left: 0;
     margin-right: 0;
@@ -268,7 +268,7 @@ p {
     color: var(--color-gris-claro);
 }
 
-.color-azul {
+.color-dorado {
     background-color: var(--color-dorado);
     color: var(--color-texto-inverso);
 }
