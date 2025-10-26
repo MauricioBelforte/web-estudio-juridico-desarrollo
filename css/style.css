@@ -14,6 +14,7 @@
     /* Negro para fondos principales */
     --color-texto-inverso: #171717;
     --color-blanco: #ffffff;
+    --color-negro: #030303;
 }
 
 /* @font-face {
@@ -32,7 +33,7 @@
 body {
     font-size: 25px;
     text-align: center;
-    color: var(--color-gris-claro); 
+    color: var(--color-gris-claro);
     margin-top: 80px;
     margin-left: 0;
     margin-right: 0;
@@ -262,9 +263,9 @@ p {
 }
 
 
-.color-rojo {
+.color-negro {
     /* Esta sección ahora también tendrá fondo oscuro para consistencia */
-    background-color: var(--color-fondo-oscuro);
+    background-color: var(--color-negro);
     color: var(--color-gris-claro);
 }
 
@@ -276,11 +277,11 @@ p {
 .color-blanco {
     /*   background-color:#E11C25;
     color: var(--color-texto-inverso); */
-    background-color: var(--color-gris-oscuro);
+    background-color: var(--color-gris-claro);
     color: var(--color-texto-inverso);
 }
 
-.color-negro {
+.color-background-oscuro {
     background-color: var(--color-fondo-oscuro);
     color: var(--color-gris-claro);
 }
