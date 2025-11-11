@@ -309,7 +309,7 @@ p {
     background-color: var(--color-fondo-oscuro);
     color: var(--color-gris-claro);
     /*  margin: 20px auto;*/
-    padding: 3%;
+    padding: 5vw 12vw 3vw 12vw;
     display: flex;
     flex-direction: column;
     text-align: center;
