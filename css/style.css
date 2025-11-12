@@ -413,7 +413,7 @@ p {
     justify-content: center;
     align-self: center;
     gap: 3vw;
-    /* padding: 2vw; */
+    padding: 1vw 10vw 3vw 10vw;
     z-index: 1;
 
 
