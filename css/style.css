@@ -265,7 +265,7 @@ p {
 
 .color-negro {
     /* Esta sección ahora también tendrá fondo oscuro para consistencia */
-    background-color: var(--color-negro);
+    background-color: rgba(0, 0, 0, 0.779);
     color: var(--color-gris-claro);
 }
 
