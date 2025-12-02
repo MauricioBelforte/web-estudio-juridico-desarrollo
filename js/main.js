@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // Lógica para el botón "Ver más"
     const btnVerMas = document.getElementById('btn-ver-mas');
-    const serviciosContainer = document.getElementById('servicios-administracion');
+    const serviciosContainer = document.getElementById('servicios-estilo-secundario');
     const arrow = document.getElementById('arrow-indicator');
     const overlay = document.getElementById('overlay-areas');
 

@@ -135,13 +135,13 @@ header .nav-links a:hover {}
 header .nav-links  .normal{
     color: rgb(174, 19, 19);  
 }*/
-.propiedades {
+.estilo-principal {
     color: var(--color-acento);
     /* background-color: #EFEFEF;*/
     /*   box-shadow: inset 0 0 0 2px rgb(255, 255, 255);*/
 }
 
-.propiedades:hover {
+.estilo-principal:hover {
 
     background-color: var(--color-dorado);
     color: var(--color-texto-inverso);
@@ -149,23 +149,23 @@ header .nav-links  .normal{
 
 }
 
-.administracion {
+.estilo-secundario {
     /*  background-color:#E11C25 ;*/
     color: var(--color-acento);
 }
 
-.administracion:hover {
+.estilo-secundario:hover {
     background-color: var(--color-gris-oscuro);
     color: var(--color-texto-inverso);
     box-shadow: inset 0 0 0 2px var(--color-blanco);
 }
 
-.inversiones {
+.estilo-terciario {
     /*  background-color:#0E2141 ;*/
     color: var(--color-acento);
 }
 
-.inversiones:hover {
+.estilo-terciario:hover {
     background-color: var(--color-gris-claro);
     color: var(--color-texto-inverso);
 }
@@ -334,7 +334,7 @@ p {
     margin-bottom: 1vw;
 }
 
-.contenedor-administracion {
+.contenedor-estilo-secundario {
 
     width: 100%;
     height: fit-content;
@@ -371,14 +371,14 @@ p {
     visibility: visible;
 }
 
-.contenedor-administracion .contenedor-imagenesdetitulos {
+.contenedor-estilo-secundario .contenedor-imagenesdetitulos {
 
     padding: 10px;
 }
 
 
 
-.contenedor-propiedades {
+.contenedor-estilo-principal {
 
     width: 100%;
     height: fit-content;
@@ -392,7 +392,7 @@ p {
 }
 
 
-.contenedor-inversiones {
+.contenedor-estilo-terciario {
 
     width: 100%;
     height: fit-content;
@@ -702,19 +702,19 @@ ul {
         margin-bottom: 1vw;
     }
 
-    .contenedor-administracion {
+    .contenedor-estilo-secundario {
         padding: 30px 20px 20px 20px;
 
     }
 
 
-    .contenedor-propiedades {
+    .contenedor-estilo-principal {
 
         padding: 20px 20px 35px;
     }
 
 
-    .contenedor-inversiones {
+    .contenedor-estilo-terciario {
 
         padding: 20px 20px 10px 20px;
 
