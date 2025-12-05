@@ -342,7 +342,7 @@ p {
     background-color: #1b1b1b39;
     background-image: url("../imagenes/estudio3.png");
 
-
+    background-position: top center;
     position: relative;
     background-size: cover;
     color: var(--color-texto-secundario);
