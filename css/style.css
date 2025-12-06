@@ -17,11 +17,19 @@
     --color-negro: #030303;
 }
 
-/* @font-face {
-    font-family: unineue;
-    src: url("../fuentes/Uni-Neue/UniNeueRegular.otf");
-
-} */
+@font-face {
+    font-family: 'Felixti';
+    /* Dale un nombre fácil de recordar */
+    src: url('../fuentes/Felixti.woff2') format('woff2'),
+        /* Formato más moderno y comprimido */
+        url('../fuentes/Felixti.woff') format('woff'),
+        /* Buen soporte */
+        url('../fuentes/Felixti.ttf') format('truetype');
+    font-weight: normal;
+    /* Define el peso si la fuente es regular */
+    font-style: normal;
+    /* Define el estilo (normal, italic, etc.) */
+}
 
 * {
     font-family: 'Roboto', sans-serif;
@@ -64,6 +72,20 @@ h1 {
 
 }
 
+.titulo-principal {
+    width: 100%;
+    padding: 0 20px 50px 20px;
+}
+
+.titulo-principal svg {
+    width: 80%;
+    height: auto;
+
+    vertical-align: middle;
+    color: var(--color-dorado);
+    fill: #d1a251;
+}
+
 header {}
 
 header nav {
@@ -74,7 +96,7 @@ header nav {
     display: flex;
     background-color: var(--color-gris-oscuro);
     height: 85px;
-    padding: 5px 2%;
+    padding: 5px 1%;
     justify-content: flex-end;
     align-items: center;
     /*  box-shadow: 2px 2px 2px 1px rgba(85, 85, 85, 0.2); */
@@ -95,6 +117,7 @@ header .logo img {
     width: auto;
     transition: all 0.5s;
     filter: invert(100%);
+    padding: 5px;
 }
 
 
