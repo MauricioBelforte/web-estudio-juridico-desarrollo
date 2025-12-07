@@ -74,11 +74,11 @@ h1 {
 
 .titulo-principal {
     width: 100%;
-    padding: 0 20px 50px 20px;
+    padding: 0 10vw 4vw 10vw;
 }
 
 .titulo-principal svg {
-    width: 80%;
+    width: 100%;
     height: auto;
 
     vertical-align: middle;
@@ -109,15 +109,18 @@ header nav {
 header .logo {
     cursor: pointer;
     margin-right: auto;
+    padding: 10px;
 
 }
 
 header .logo img {
-    height: 70px;
+    height: 50px;
+    /*     transform-origin: left center; */
     width: auto;
     transition: all 0.5s;
-    filter: invert(100%);
-    padding: 5px;
+    filter: invert(95%);
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -175,6 +178,7 @@ header .nav-links  .normal{
 .estilo-secundario {
     /*  background-color:#E11C25 ;*/
     color: var(--color-acento);
+    box-shadow: inset 0 0 0 2px transparent;
 }
 
 .estilo-secundario:hover {
@@ -332,7 +336,7 @@ p {
     background-color: var(--color-fondo-oscuro);
     color: var(--color-gris-claro);
     /*  margin: 20px auto;*/
-    padding: 5vw 12vw 3vw 12vw;
+    padding: 4vw 12vw 3vw 12vw;
     display: flex;
     flex-direction: column;
     text-align: center;
