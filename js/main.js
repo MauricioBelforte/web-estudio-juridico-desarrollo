@@ -40,3 +40,22 @@ function openNav() {
 function closeNav() {
     document.getElementById("menu-movil").style.width = "0%";
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const elementoAnimado = document.querySelector('.animacion-presentacion');
+
+    if (elementoAnimado) {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    elementoAnimado.classList.add('visible');
+                    observer.unobserve(elementoAnimado); // Dejar de observar una vez que es visible
+                }
+            });
+        }, {
+            threshold: 0.1 // Se activa cuando al menos el 10% del elemento es visible
+        });
+
+        observer.observe(elementoAnimado);
+    }
+});
