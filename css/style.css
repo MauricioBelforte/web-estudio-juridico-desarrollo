@@ -2,7 +2,7 @@
 :root {
     --color-dorado: #d1a251;
     /* Dorado para títulos y acentos */
-    --color-dorado-hover: #ecb65a;
+    --color-dorado-hover: rgb(237, 185, 96);
     /* Dorado más claro para hover */
     --color-acento: #dfdfdf;
     /* Gris azulado para texto/links */
@@ -172,7 +172,7 @@ header .logo img {
     /*     transform-origin: left center; */
     width: auto;
     transition: all 0.5s;
-    filter: invert(95%);
+    filter: invert(85%);
     display: block;
     margin: 0 auto;
 }
@@ -252,11 +252,11 @@ header .nav-links  .normal{
 
 .normal {
 
-    color: var(--color-acento);
+    color: var(--color-gris-claro);
 }
 
 .normal:hover {
-    color: #ffffff;
+    color: var(--color-dorado);
 }
 
 .menu-hamburguesa {
@@ -308,6 +308,7 @@ header .menu-hamburguesa button {
     margin: 10px;
     height: 40px;
 
+
 }
 
 header .menu-hamburguesa button:hover {
@@ -318,6 +319,7 @@ header .menu-hamburguesa button:hover {
 
 header .menu-hamburguesa button img {
     height: 40px;
+    filter: grayscale(100%) brightness(140%);
 }
 
 
@@ -340,7 +342,7 @@ header .menu-hamburguesa button img {
 }
 
 p {
-    color: rgb(208, 208, 208);
+    color: var(--color-gris-claro);
     padding: 5px;
     font-family: "Tajawal", sans-serif;
     font-weight: 400;
