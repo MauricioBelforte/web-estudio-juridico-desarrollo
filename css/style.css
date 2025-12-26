@@ -405,7 +405,7 @@ p {
     background-color: var(--color-fondo-oscuro);
     color: var(--color-gris-claro);
     /*  margin: 20px auto;*/
-    padding: 4vw 12vw 3vw 12vw;
+    padding: 4vw 10vw 3vw 10vw;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -774,7 +774,7 @@ ul {
 @media screen and (max-width:800px) {
     body {
 
-        font-size: 20px;
+        font-size: 25px;
 
     }
 
@@ -905,7 +905,7 @@ ul {
 
     body {
 
-        font-size: 15px;
+        font-size: 25px;
     }
 
 
