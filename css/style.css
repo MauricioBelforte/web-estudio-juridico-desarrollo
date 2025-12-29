@@ -514,7 +514,7 @@ p {
     align-items: center;
     justify-content: center;
     align-self: center;
-    gap: 3vw;
+    gap: 50px;
     padding: 1vw 5vw 1vw 5vw;
     z-index: 1;
 
@@ -750,7 +750,7 @@ ul {
     h2 {
         font-family: "Felixti", sans-serif;
         font-weight: 400;
-        font-size: 55px;
+        font-size: 4vw;
         color: var(--color-dorado);
     }
 
@@ -814,7 +814,7 @@ ul {
     h2 {
         font-family: "Felixti", sans-serif;
         font-weight: 400;
-        font-size: 35px;
+        font-size: 5vw;
         color: var(--color-dorado);
     }
 
@@ -905,7 +905,7 @@ ul {
 
     body {
 
-        font-size: 21px;
+        font-size: 20px;
     }
 
 
@@ -936,7 +936,12 @@ ul {
         font-size: 20px;
     }
 
-
+    h2 {
+        font-family: "Felixti", sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        color: var(--color-dorado);
+    }
 
     .contenedor-imagenesdetitulos {
         width: 100%;
