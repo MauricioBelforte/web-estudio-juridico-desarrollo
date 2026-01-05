@@ -547,7 +547,7 @@ h3 {
 
 
 .datosdecontacto {
-    padding: 2%;
+    padding: 30px 2%;
     border-top: 1px groove #b8b8b8;
 
 
@@ -927,7 +927,7 @@ ul {
     .emails {
 
 
-        margin: auto;
+        margin: 3vw auto;
         width: 100%;
 
     }
