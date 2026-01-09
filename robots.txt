@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://www.estudiolaunes.com.ar/sitemap.xml
