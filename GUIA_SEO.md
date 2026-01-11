@@ -209,3 +209,19 @@ Aquí tienes un esqueleto HTML listo para copiar y pegar, con todas las etiqueta
 </body>
 </html>
 ```
+
+
+---
+
+## 8. Imágenes y Atributo Alt
+
+**Ubicación:** En la etiqueta `<img>`.
+**Función:** Describe el contenido de la imagen para Google y usuarios con lectores de pantalla.
+
+Google no puede "ver" las imágenes como un humano, por lo que necesita el texto alternativo para entender su contenido. Además, es crucial para la accesibilidad web.
+
+**Ejemplo:**
+```html
+<a href="https://www.instagram.com/estudiolaunes" target="_blank"><img src="imagenes/instagram.png" alt="Instagram"></a>
+
+```
