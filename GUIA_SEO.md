@@ -225,3 +225,39 @@ Google no puede "ver" las imágenes como un humano, por lo que necesita el texto
 <a href="https://www.instagram.com/estudiolaunes" target="_blank"><img src="imagenes/instagram.png" alt="Instagram"></a>
 
 ```
+
+# 9. Estrategia H1 con Imágenes (Visually Hidden)
+
+**El Problema:** A veces el diseño requiere que el título principal sea un logotipo o una imagen compleja (SVG), pero Google necesita texto real en una etiqueta `<h1>` para entender de qué trata la página.
+
+**La Solución:** Usar la técnica "Visually Hidden". Esto oculta el texto a los ojos del usuario (para no romper el diseño) pero lo deja visible para Google y lectores de pantalla.
+
+**Paso 1: Agregar la clase CSS**
+Copia esta clase en tu archivo CSS. Es la forma estándar y accesible de ocultar elementos:
+
+```css
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+```
+
+**Paso 2: Implementar en el HTML**
+Coloca tu `<h1>` con el texto optimizado y aplícale la clase. Deja tu imagen visible justo debajo.
+
+```html
+<!-- Texto para Google (Oculto visualmente) -->
+<h1 class="visually-hidden">Estudio Jurídico Launes & Asociados - Abogados en Argentina y Uruguay</h1>
+
+<!-- Imagen para el Usuario (Visible) -->
+<div class="titulo-principal">
+    <svg>...</svg> <!-- O tu etiqueta <img> -->
+</div>
+```
