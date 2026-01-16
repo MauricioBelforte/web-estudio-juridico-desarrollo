@@ -649,6 +649,10 @@ footer .contenedor-pie p {
 }
 
 .btn-ver-mas {
+    font-family: Calibri, 'Trebuchet MS', sans-serif;
+    /* PASAR A MAYUSCULAS */ 
+  /*   text-transform: uppercase; */
+
     border: none;
     padding: 10px 20px;
     cursor: pointer;
