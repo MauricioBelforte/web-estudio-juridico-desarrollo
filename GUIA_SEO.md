@@ -19,7 +19,7 @@ Allow: /               <-- Tienen permiso para entrar a todo el sitio
 Disallow: /privado/    <-- (Opcional) Prohibido entrar a la carpeta "privado"
 
 # Es buena práctica indicar aquí dónde está el mapa
-Sitemap: https://www.estudiolaunes.com.ar/sitemap.xml
+Sitemap: https://estudiolaunes.com.ar/sitemap.xml
 ```
 
 ### B. La etiqueta `<meta name="robots">` (El Guía de la Habitación)
@@ -50,7 +50,7 @@ A veces los robots no encuentran todas las páginas si no están bien enlazadas 
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
    <url>
-      <loc>https://www.estudiolaunes.com.ar/</loc>
+      <loc>https://estudiolaunes.com.ar/</loc>
       <lastmod>2024-05-16</lastmod> <!-- Fecha de última modificación -->
    </url>
    <!-- Aquí irían otras páginas internas si las tuvieras -->
@@ -74,7 +74,7 @@ Si Google ve tres páginas idénticas, divide la reputación entre las tres. La 
 
 **Ejemplo:**
 ```html
-<link rel="canonical" href="https://www.estudiolaunes.com.ar/">
+<link rel="canonical" href="https://estudiolaunes.com.ar/">
 ```
 **Traducción:** "Google, no importa por cuál de las variantes hayas entrado, la URL que debes posicionar y a la que debes sumar la reputación es esta".
 
@@ -129,19 +129,6 @@ Además de las anteriores, estas son fundamentales para el navegador y Google:
 
 ---
 
-## Resumen de Implementación
-
-1.  **Crear `robots.txt`** en la raíz: Para permitir el acceso y declarar el sitemap.
-2.  **Crear `sitemap.xml`** en la raíz: Listando tus URLs importantes.
-3.  **En el HTML (`<head>`):**
-    *   **Esenciales:** `<title>`, `<meta name="description">`, `<meta name="viewport">`.
-    *   **Indexación:** `<meta name="robots">`, `<link rel="canonical">`.
-    *   **Información:** `<meta name="author">`, `<meta name="keywords">`.
-    *   **Redes Sociales (Open Graph):** `og:type`, `og:title`, `og:description`, `og:image`, `og:url`.
-    *   **Twitter Cards:** `twitter:card`, `twitter:title`, `twitter:description`, `twitter:image`.
-
----
-
 ## 7. Flujo de Trabajo: Desarrollo (GitHub) vs. Producción
 
 Es común desarrollar la web en un entorno de prueba (como GitHub Pages) antes de subirla al hosting oficial. Para evitar que Google indexe tu web a medio terminar, sigue este flujo:
@@ -162,54 +149,8 @@ Cuando subas la web a tu dominio final, permite la entrada a Google.
 
 ### ¿Qué pasa con las URLs (Canonical y Redes)?
 **Déjalas apuntando siempre al dominio oficial.**
-Aunque estés en GitHub, configura tu `canonical`, `og:url` y `twitter:url` con la dirección final (ej: `https://www.estudiolaunes.com.ar`).
+Aunque estés en GitHub, configura tu `canonical`, `og:url` y `twitter:url` con la dirección final (ej: `https://estudiolaunes.com.ar`).
 *   **¿Por qué?** Al tener `noindex` en desarrollo, Google ignora esas etiquetas, así que no generan error. Cuando pases a producción, ya tendrás todo configurado correctamente sin tener que editar línea por línea.
-
----
-
-## Plantilla HTML Base (Boilerplate SEO)
-
-Aquí tienes un esqueleto HTML listo para copiar y pegar, con todas las etiquetas mencionadas anteriormente implementadas:
-
-```html
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <!-- VIEWPORT: Indispensable para móviles -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- BÁSICOS SEO -->
-    <title>Título de la Página | Tu Marca</title>
-    <meta name="description" content="Descripción atractiva de la página para los resultados de búsqueda (aprox. 160 caracteres).">
-    <meta name="keywords" content="palabra1, palabra2, servicio clave">
-    <meta name="author" content="Nombre del Autor o Empresa">
-
-    <!-- ROBOTS: Indexación -->
-    <meta name="robots" content="index, follow">
-
-    <!-- CANONICAL: URL original de esta página específica -->
-    <link rel="canonical" href="https://www.tusitio.com/pagina-actual/">
-
-    <!-- OPEN GRAPH (Facebook, WhatsApp, LinkedIn) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://www.tusitio.com/pagina-actual/">
-    <meta property="og:title" content="Título Atractivo para Redes">
-    <meta property="og:description" content="Descripción optimizada para compartir en redes.">
-    <meta property="og:image" content="https://www.tusitio.com/imagenes/imagen-para-compartir.jpg">
-
-    <!-- TWITTER CARDS -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Título para Twitter">
-    <meta name="twitter:description" content="Descripción para Twitter.">
-    <meta name="twitter:image" content="https://www.tusitio.com/imagenes/imagen-para-compartir.jpg">
-</head>
-<body>
-    <!-- Tu contenido aquí -->
-</body>
-</html>
-```
-
 
 ---
 
@@ -223,34 +164,76 @@ Google no puede "ver" las imágenes como un humano, por lo que necesita el texto
 **Ejemplo:**
 ```html
 <a href="https://www.instagram.com/estudiolaunes" target="_blank"><img src="imagenes/instagram.png" alt="Instagram"></a>
-
 ```
 
-# 9. Estrategia H1 con Imágenes (Visually Hidden)
+---
+
+## 9. Optimización de Rendimiento y Core Web Vitals (NUEVO)
+
+Google no solo se fija en el contenido, sino también en la **experiencia del usuario** al navegar tu web. Las "Core Web Vitals" son métricas que miden la velocidad de carga, la interactividad y la estabilidad visual. Mejorarlas puede darte un impulso en los rankings.
+
+### A. Datos Estructurados (Schema.org) - El DNI de tu negocio
+
+**Función:** Es un código (normalmente JSON-LD) que le explica a Google de qué trata tu negocio de forma estructurada. No es solo texto, es un "Servicio Legal" con dirección, teléfono, etc. Esto es **crucial** para el SEO local y para aparecer en fichas de negocio enriquecidas.
+
+**Ubicación:** En el `<head>` del HTML, dentro de una etiqueta `<script type="application/ld+json">`.
+
+**Ejemplo (para un estudio jurídico):**
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LegalService",
+  "name": "Estudio Jurídico Launes & Asociados",
+  "image": "https://estudiolaunes.com.ar/imagenes/logoyletras.png",
+  "url": "https://estudiolaunes.com.ar/",
+  "telephone": "+54 9 11 2450-2746",
+  "description": "Asesoramiento legal integral a empresas y particulares en Argentina y Uruguay."
+}
+</script>
+```
+
+### B. Evitar Saltos en el Diseño (CLS - Cumulative Layout Shift)
+
+**El Problema:** La página carga y, de repente, los elementos (texto, botones) se mueven porque una imagen acaba de aparecer. Esto es molesto y Google lo penaliza.
+
+**La Solución:** Siempre especifica el ancho (`width`) y alto (`height`) de tus imágenes en el HTML. El navegador reservará ese espacio y evitará que el diseño "salte".
+
+```html
+<img src="imagenes/logo.png" alt="Logo del Estudio" width="50" height="50">
+```
+
+### C. Carga Rápida de Imágenes (Lazy Loading)
+
+**El Problema:** Tu página intenta cargar todas las imágenes a la vez, incluso las que están al final (como en el footer). Esto ralentiza la carga inicial.
+
+**La Solución:** Usa el atributo `loading="lazy"` para las imágenes que no son visibles al principio. El navegador las cargará solo cuando el usuario se acerque a ellas.
+
+```html
+<img src="imagenes/whatsapp.png" alt="WhatsApp" width="50" height="50" loading="lazy">
+```
+
+### D. Optimizar la Carga de Fuentes (LCP - Largest Contentful Paint)
+
+**El Problema:** El navegador espera a descargar una fuente personalizada (`@font-face`) antes de mostrar el texto, lo que deja partes de la página en blanco por un momento.
+
+**La Solución:** Agrega `font-display: swap;` a tu declaración `@font-face` en el CSS. Esto le dice al navegador que muestre el texto con una fuente de sistema inmediatamente y la cambie por la tuya cuando termine de descargar.
+
+```css
+@font-face {
+    font-family: 'Felixti';
+    src: url('../fuentes/Felixti.woff2') format('woff2');
+    font-display: swap; /* <--- Agrega esto */
+}
+```
+
+---
+
+## 10. Estrategia H1 con Imágenes (Visually Hidden)
 
 **El Problema:** A veces el diseño requiere que el título principal sea un logotipo o una imagen compleja (SVG), pero Google necesita texto real en una etiqueta `<h1>` para entender de qué trata la página.
 
 **La Solución:** Usar la técnica "Visually Hidden". Esto oculta el texto a los ojos del usuario (para no romper el diseño) pero lo deja visible para Google y lectores de pantalla.
-
-**Paso 1: Agregar la clase CSS**
-Copia esta clase en tu archivo CSS. Es la forma estándar y accesible de ocultar elementos:
-
-```css
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    white-space: nowrap;
-    border: 0;
-}
-```
-
-**Paso 2: Implementar en el HTML**
-Coloca tu `<h1>` con el texto optimizado y aplícale la clase. Deja tu imagen visible justo debajo.
 
 ```html
 <!-- Texto para Google (Oculto visualmente) -->
