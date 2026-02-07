@@ -570,6 +570,7 @@ h3 {
 
 .logosredes img {
     width: 50px;
+    height: auto;
     margin: 25px;
     transition: all ease-in-out 0.2s;
     filter: brightness(70%) grayscale(99%);
@@ -905,6 +906,7 @@ ul {
 
     header .menu-hamburguesa button img {
         height: 30px;
+        width: auto;
     }
 
     .titulo-principal {
