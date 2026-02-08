@@ -243,6 +243,105 @@ Google no solo se fija en el contenido, sino también en la **experiencia del us
 </script>
 ```
 
+ACA VAMOS A DETALLAR ESTA PARTE EN LA GUÍA DE DATOS ESTRUCTURADOS, PORQUE ES UN TEMA MUY IMPORTANTE Y CON MUCHAS ARISTAS.
+
+  ---
+  # Guía de Datos Estructurados DETALLADA (Schema.org) para Estudio Jurídico
+
+  Esta guía detalla la implementación avanzada de **JSON-LD** que hemos integrado en el sitio web. Este código no es visible para los humanos en la pantalla, pero es lo que Google lee para entender quién eres, dónde estás y qué haces con precisión técnica.
+
+  ---
+
+  ## 1. El Código Implementado
+
+  Actualmente, tu sitio cuenta con una estructura "Multi-Entidad". Esto significa que le estamos presentando a Google dos conceptos diferentes al mismo tiempo dentro del mismo script:
+  1.  **El Sitio Web** (como plataforma digital).
+  2.  **El Negocio Físico** (como estudio jurídico con oficinas reales).
+
+  Este es el bloque de código optimizado que tienes en tu `index.html`:
+
+  ```json
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Estudio Jurídico Launes & Asociados",
+      "url": "https://estudiolaunes.com.ar/",
+      "alternateName": ["Estudio Launes", "Launes y Asociados"]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "LegalService",
+      "name": "Estudio Jurídico Launes & Asociados",
+      "image": "https://estudiolaunes.com.ar/imagenes/logoyletras.png",
+      "url": "https://estudiolaunes.com.ar/",
+      "telephone": "+54 9 11 2450-2746",
+      "email": "fabricio@estudiolaunes.com.ar",
+      "address": [
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Amapolas 475, of 113",
+          "addressLocality": "Pilar",
+          "addressRegion": "Buenos Aires",
+          "addressCountry": "AR"
+        },
+        {
+          "@type": "PostalAddress",
+          "streetAddress": "Plaza Independencia 822 Piso 13",
+          "addressLocality": "Montevideo",
+          "addressCountry": "UY"
+        }
+      ],
+      "description": "Asesoramiento legal integral a empresas y particulares en Argentina y Uruguay.",
+      "priceRange": "$$" 
+    }
+  ]
+  ```
+
+  ---
+
+  ## 2. Desglose de la Estrategia
+
+  Aquí te explico por qué cada parte es vital para tu SEO:
+
+  ### A. El Array `[...]` (Corchetes)
+  Google permite definir múltiples "cosas" en una sola página. Al encerrar todo entre corchetes `[ ... ]`, le decimos: "Aquí tienes una lista de entidades conectadas".
+
+  ### B. Entidad 1: `@type": "WebSite"` (Nombre del Sitio)
+  Esta parte controla cómo aparece el nombre de tu página en los resultados de búsqueda móvil (la función "Site Name" de Google).
+
+  *   **`name`**: Es el nombre oficial que Google mostrará en grande sobre la URL en los resultados.
+  *   **`alternateName`**: Esto es **muy potente**. Le dice a Google: "Si alguien busca 'Estudio Launes' o 'Launes y Asociados', también se refieren a mí". Ayuda a capturar búsquedas de marca que no son exactas.
+
+  ### C. Entidad 2: `@type": "LegalService"` (Ficha de Negocio)
+  Aquí definimos el negocio físico. Usamos `LegalService` (más específico que `LocalBusiness`).
+
+  *   **`address` (Array de Direcciones):**
+      *   **La Magia:** Tienes oficinas en dos países. La mayoría de las webs solo ponen una dirección. Nosotros hemos usado un **Array `[]`** dentro de `address` para listar tanto la oficina de **Pilar (AR)** como la de **Montevideo (UY)**.
+      *   **El Beneficio:** Esto aumenta las posibilidades de aparecer en búsquedas locales ("abogados en Pilar" o "abogados en Montevideo") sin necesidad de crear páginas separadas.
+
+  *   **`priceRange`: "$$"**
+      *   Indica un rango de precios moderado. Es requerido por Google para ciertos tipos de negocios locales. Ayuda a filtrar clientes que buscan algo "muy barato" ($) o "muy exclusivo" ($$$$).
+
+  *   **`telephone` y `email`**
+      *   Hacen que los botones de "Llamar" o "Contactar" en las fichas de Google funcionen correctamente y conecten directamente contigo.
+
+  ---
+
+  ## 3. Cómo Validar este Código
+
+  Siempre que hagas cambios en este bloque, debes verificar que Google lo entienda sin errores.
+
+  1.  Ve a la herramienta oficial: **Prueba de Resultados Enriquecidos de Google**.
+  2.  Pega tu URL (`https://estudiolaunes.com.ar/`) o copia y pega el fragmento de código `<script>`.
+  3.  Deberías ver detectados dos elementos válidos: **Sitio web** y **Empresa local**.
+
+
+ESTE ES EL FINAL DEL DETALLE DE LA ESTRATEGIA DE DATOS ESTRUCTURADOS, EL RESTO DE LA GUÍA SE CENTRARÁ EN OTROS ASPECTOS DEL SEO TÉCNICO.
+
+---
+
+
 ### B. Evitar Saltos en el Diseño (CLS - Cumulative Layout Shift)
 
 **El Problema:** La página carga y, de repente, los elementos (texto, botones) se mueven porque una imagen acaba de aparecer. Esto es molesto y Google lo penaliza.
